@@ -4,21 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Q4 Practice 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
     <h1>JavaScript Conditional Statements</h1>
     <!--hi i love conrad fisher-->
 
+    <input type="text" class="form-control" id="Age" placeholder="type here...">
+    <button class="btn btn-info" onclick="checkAge()">Check</button>
+
     <script>
-        if (19 < 18){
-            alert("Your are a minor.")
+        function checkAge(){
+        var Age = document.getElementById("Age").value;
+
+        if (isNaN(Age) || Age < 0){
+            alert("Please input a valid number.");
         }
+
+        else if (Age < 18){
+            alert("You are a minor.");
+        }
+
         else if (21 > 18){
-            alert("You are of legal age.")
+            alert("You are of legal age.");
         }
+
         else {
-            alert("Age could not be determined.")
+            alert("Age could not be determined.");
         }
+
+    }
 
     </script>
 </body>
